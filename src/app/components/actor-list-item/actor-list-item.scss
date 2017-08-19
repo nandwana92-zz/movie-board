@@ -1,0 +1,12 @@
+.actor-list-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.actor-name {
+@include text-overflow;
+width: 200px;}
+
+.actor-rating {
+  margin-left: 10px;
+}

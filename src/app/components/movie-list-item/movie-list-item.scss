@@ -1,0 +1,42 @@
+.movie-list-item {
+  @include row;
+  @include center-across;
+  padding: 10px;
+
+  &--closed {
+    cursor: pointer;
+  }
+
+  &__details {
+    margin: 10px 20px;
+    position: relative;
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__details-item {
+    margin: 5px 0;
+  }
+
+  &__field {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #3F51B5;
+  }
+}
+
+.movie-title {
+  @include text-overflow;
+  width: 200px;
+}
+
+.movie-year {
+  @include text-overflow;
+  width: 80px;
+}
+
+.movie-rating {}

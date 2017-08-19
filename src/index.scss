@@ -1,0 +1,78 @@
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center-along {
+  justify-content: center;
+}
+
+@mixin center-across {
+  align-items: center;
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unstyled-anchor {
+  text-decoration: none;
+  color: inherit;
+}
+
+.even-row {
+  background-color: #FAFAFA;
+}
+
+.odd-row {
+  background-color: #EEEEEE;
+}
+
+.table-row {
+  @include row;
+  @include center-across;
+}
+
+.table-row:hover {
+  background-color: #E0E0E0;
+}
+
+.flex-filler {
+  flex: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.rating-container {
+  @include row;
+  @include center-across;
+
+  img {
+    margin-left: 5px;
+    height: 18px;
+  }
+}
+
+@import "app/components/app/app.scss";
+@import "app/components/actor-list/actor-list.scss";
+@import "app/components/actor-list-header/actor-list-header.scss";
+@import "app/components/actor-list-body/actor-list-body.scss";
+@import "app/components/actor-list-item/actor-list-item.scss";
+@import "app/components/movie-list/movie-list.scss";
+@import "app/components/movie-list-header/movie-list-header.scss";
+@import "app/components/movie-list-body/movie-list-body.scss";
+@import "app/components/movie-list-item/movie-list-item.scss";

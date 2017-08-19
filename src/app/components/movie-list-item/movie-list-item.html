@@ -1,0 +1,35 @@
+<div class="movie-list-item table-row" ng-class="{'even-row': $ctrl.index % 2 === 0, 'odd-row': $ctrl.index % 2 !== 0, 'movie-list-item--closed': !$ctrl.isExpanded}" ng-click="$ctrl.isExpanded = true;">
+  <div class="movie-title">
+    {{$ctrl.movieData.Title}}
+  </div>
+  <div class="movie-year">
+    {{$ctrl.movieData.ReleaseYear}}
+  </div>
+  <div class="movie-rating rating-container">
+    {{$ctrl.movieData.Rating | number:2}}
+    <img src="http://i.imgur.com/wj7fDvn.png">
+  </div>
+  <div class="flex-filler">
+  </div>
+</div>
+<div class="movie-list-item__details" ng-show="$ctrl.isExpanded">
+  <button type="button" ng-show="$ctrl.isExpanded" ng-click="$ctrl.isExpanded = false; $event.stopPropagation();">Collapse</button>
+  <div class="movie-list-item__details-item">
+    <span class="movie-list-item__field">Genre:</span><span>{{$ctrl.movieData.Genre}}</span>
+  </div>
+  <div class="movie-list-item__details-item">
+    <span class="movie-list-item__field">Release Date:</span><span>{{$ctrl.movieData.ReleaseDate}}</span>
+  </div>
+  <div class="movie-list-item__details-item">
+    <span class="movie-list-item__field">Description:</span><span>{{$ctrl.movieData.Description}}</span>
+  </div>
+  <div class="movie-list-item__details-item">
+    <span class="movie-list-item__field">Title:</span><span>{{$ctrl.movieData.Title}}</span>
+  </div>
+  <div class="movie-list-item__details-item">
+    <span class="movie-list-item__field">Rating:</span><span>{{$ctrl.movieData.Rating}}</span>
+  </div>
+  <div class="movie-list-item__details-item">
+    <span class="movie-list-item__field">Trailer Link:</span><a target="_blank" ng-href="{{$ctrl.movieData.TrailerLink}}">{{$ctrl.movieData.TrailerLink}}</a>
+  </div>
+</div>

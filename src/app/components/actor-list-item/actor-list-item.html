@@ -1,0 +1,11 @@
+<a class="unstyled-anchor" ui-sref="movieList({actorId: $ctrl.actorData.Id})">
+  <div class="actor-list-item table-row" ng-class="{'even-row': $ctrl.index % 2 === 0, 'odd-row': $ctrl.index % 2 !== 0}">
+    <div class="actor-name">
+      {{$ctrl.actorData.Name}}
+    </div>
+    <div class="actor-rating rating-container">
+      {{$ctrl.actorData.Rating | number:2}}
+      <img src="http://i.imgur.com/wj7fDvn.png">
+    </div>
+  </div>
+</a>
