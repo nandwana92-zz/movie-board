@@ -4,6 +4,7 @@ export const app = {
   bindings: {},
   template,
   controller: class app {
+    /** @ngInject */
     constructor(movieService, movieDataStore) {
       this.movieService = movieService;
       this.movieDataStore = movieDataStore;

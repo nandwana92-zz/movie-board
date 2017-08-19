@@ -4,8 +4,8 @@ export const movieList = {
   bindings: {},
   template,
   controller: class movieList {
+    /** @ngInject */
     constructor(movieService, movieDataStore, $stateParams) {
-      'ngInject';
       this.movieService = movieService;
       this.movieDataStore = movieDataStore;
       this.$stateParams = $stateParams;
