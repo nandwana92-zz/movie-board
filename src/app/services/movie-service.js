@@ -1,5 +1,6 @@
 export default class movieService {
   constructor($http, movieDataStore) {
+    'ngInject';
     this.BASE_URL = 'http://api.cinemalytics.in/v2';
     this.TOKEN = '8636A9BD30BE36407402BBAA326C8A2E';
     this.$http = $http;

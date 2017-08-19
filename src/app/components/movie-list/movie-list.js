@@ -5,6 +5,7 @@ export const movieList = {
   template,
   controller: class movieList {
     constructor(movieService, movieDataStore, $stateParams) {
+      'ngInject';
       this.movieService = movieService;
       this.movieDataStore = movieDataStore;
       this.$stateParams = $stateParams;

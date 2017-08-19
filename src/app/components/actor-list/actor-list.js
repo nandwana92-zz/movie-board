@@ -7,16 +7,7 @@ export const actorList = {
   },
   template,
   controller: class actorList {
-    constructor(movieService, movieDataStore) {
-      this.movieService = movieService;
-      this.movieDataStore = movieDataStore;
-    }
-    $onInit() {
-      // this.getActors();
-      // this.listItems = this.movieDataStore.getActors();
-    }
-    getActors() {
-      // this.movieService.getActorsByHighestRating();
-    }
+    constructor() {}
+    $onInit() {}
   }
 };
